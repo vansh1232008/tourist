@@ -1,0 +1,25 @@
+---------------Welcome to Travel Planner of Bhubaneswar---------------
+These are our famous locations : 
+Bhubaneswar Railway Station
+Lingaraj Temple
+Udayagiri and Khandagiri Caves
+Nandankanan Zoological Park
+Dhauli Shanti Stupa
+Kalinga Stadium
+Regional Science Centre
+Odisha State Museum
+Ekamra Kanan Botanical Gardens
+Pathani Samanta Planetarium
+Rajarani Temple
+----------------------------------------------------------------------
+Do you want to get the shortest path between your source and destination? Type Y or y to proceed : y
+Enter source location bhubaneswar railway station
+Enter destination location Ekamra kanan botanical gardens
+The total distance that has to be travelled is 33.5 kms. 
+The number of stops will be 4. 
+The path will be: 
+Bhubaneswar Railway Station -> Lingaraj Temple -> Dhauli Shanti Stupa -> Odisha State Museum -> Kalinga Stadium -> Ekamra Kanan Botanical Gardens.
+
+Do you want to get the shortest path between your source and destination? nn
+
+Thanks for using our application.

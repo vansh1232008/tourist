@@ -1,0 +1,278 @@
+/* styles.css */
+
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for Theme Colors */
+:root {
+    --primary-color: #0d6efd;
+    --secondary-color: #6c757d;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #0dcaf0;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --body-bg: var(--light-color);
+    --body-text: #333;
+}
+
+body.dark-mode {
+    --body-bg: #121212;
+    --body-text: #f1f1f1;
+    --card-bg: #1e1e1e;
+    --navbar-bg: #1e1e1e;
+    --footer-bg: #1e1e1e;
+    --toast-bg-success: #28a745;
+    --toast-bg-danger: #dc3545;
+    --toast-bg-warning: #ffc107;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--body-bg);
+    color: var(--body-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navigation Bar */
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-link {
+    margin-right: 1rem;
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+#theme-toggle {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+#theme-toggle:hover {
+    color: #ffc107;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    filter: brightness(50%);
+}
+
+.hero-section .text-center {
+    position: relative;
+    z-index: 1;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-section p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn-success {
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+}
+
+.hero-section .btn-success:hover {
+    background-color: #218838;
+}
+
+/* Main Planner Container */
+#planner {
+    padding-top: 60px;
+}
+
+/* Cards Styling */
+.card {
+    background-color: var(--body-bg);
+    color: var(--body-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-header h5 {
+    display: flex;
+    align-items: center;
+}
+
+.card-header h5 i {
+    margin-right: 10px;
+}
+
+.card-body {
+    position: relative;
+}
+
+.card-body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.card-body li {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Map Styling */
+#map {
+    height: 600px;
+    width: 100%;
+    border-radius: 10px;
+}
+
+@media (max-width: 992px) {
+    #map {
+        height: 400px;
+    }
+}
+
+/* About Section */
+.about-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* FAQs Section */
+.faqs-section .accordion-button::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f107";
+    font-weight: 900;
+    margin-left: auto;
+}
+
+.faqs-section .accordion-button.collapsed::after {
+    content: "\f105";
+}
+
+/* Contact Section */
+.contact-section form .form-label i {
+    margin-right: 5px;
+}
+
+.contact-section button {
+    padding: 10px 20px;
+}
+
+/* Map Legend */
+.map-legend {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+body.dark-mode .map-legend {
+    background-color: rgba(33, 37, 41, 0.9);
+    color: #f1f1f1;
+}
+
+.map-legend h5 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.map-legend ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.map-legend ul li i {
+    margin-right: 10px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--footer-bg);
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 1.2rem;
+}
+
+footer a:hover {
+    color: var(--warning-color);
+}
+
+/* Toast Styling */
+.toast-body {
+    font-size: 1rem;
+}
+
+/* Dark Mode Specific Styles */
+body.dark-mode .card {
+    background-color: var(--card-bg);
+    color: var(--body-text);
+}
+
+body.dark-mode .navbar {
+    background-color: var(--navbar-bg);
+}
+
+body.dark-mode footer {
+    background-color: var(--footer-bg);
+}
+
+body.dark-mode #liveToast {
+    background-color: var(--dark-color);
+    color: var(--body-text);
+}
+
+/* Animations */
+.animate__animated.animate__fadeInDown {
+    animation-duration: 1s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .map-legend {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
